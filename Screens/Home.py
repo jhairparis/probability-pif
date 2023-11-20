@@ -140,10 +140,10 @@ class Ui_Home(object):
         self.scrollMath = QtWidgets.QScrollArea(self.one)
 
         self.Math = QtWidgets.QWidget(self.scrollMath)
-        self.Math.setFixedSize(QtCore.QSize(300, 250))
+        self.Math.setFixedSize(QtCore.QSize(300, 800))
 
         self.explainWithMath = QtWidgets.QLabel(self.Math)
-        self.explainWithMath.setGeometry(QtCore.QRect(0, 0, 300, 250))
+        self.explainWithMath.setGeometry(QtCore.QRect(0, 0, 300, 800))
         self.explainWithMath.setObjectName("label")
 
         self.scrollMath.setWidget(self.Math)
@@ -178,8 +178,8 @@ class Ui_Home(object):
     def explain(self, text, text2=""):
         self.prev += str(text) + str(text2) + "\n"
         img = MathToQPixmap(self.prev, fs=12)
-        self.Math.setGeometry(QtCore.QRect(0, 0, 300, img.height()))
-        self.explainWithMath.setGeometry(QtCore.QRect(0, 0, 300, img.height()))
+        self.Math.setGeometry(QtCore.QRect(0, 0, 300, 800))
+        self.explainWithMath.setGeometry(QtCore.QRect(0, 0, 300, 800))
         self.explainWithMath.setPixmap(img)
 
         return
